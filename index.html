@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Delicious Restaurant</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+color:#333;
+}
+
+header{
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1600&q=80') center/cover;
+color:white;
+text-align:center;
+padding:90px 20px;
+}
+
+nav{
+background:#111;
+text-align:center;
+padding:12px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:0 12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.section{
+background:white;
+margin-top:20px;
+padding:25px;
+border-radius:10px;
+}
+
+/* CLEAN CLEAR BACKGROUND MENU SECTION */
+.menu-section{
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80') center/cover;
+border-radius:10px;
+padding:25px;
+margin-top:20px;
+color:white;
+}
+
+.menu-section h2{
+color:white;
+text-align:center;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.card{
+background:rgba(255,255,255,0.95);
+padding:20px;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+text-align:center;
+color:#333;
+}
+
+.card h3{margin:10px 0;}
+
+.price{
+color:green;
+font-weight:bold;
+}
+
+button{
+background:#27ae60;
+color:white;
+border:none;
+padding:10px;
+margin-top:10px;
+cursor:pointer;
+border-radius:6px;
+width:80%;
+}
+
+button:hover{background:#219150;}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Delicious Restaurant</h1>
+<p>Fresh food • Fast service • Affordable prices</p>
+</header>
+
+<nav>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<section id="menu" class="menu-section">
+<h2>Our Menu</h2>
+
+<div class="menu">
+
+<div class="card">
+<h3>Chicken Curry</h3>
+<p class="price">KSh 350</p>
+<button onclick="order('Chicken Curry')">Order</button>
+</div>
+
+<div class="card">
+<h3>Ugali & Beef</h3>
+<p class="price">KSh 300</p>
+<button onclick="order('Ugali & Beef')">Order</button>
+</div>
+
+<div class="card">
+<h3>Pilau</h3>
+<p class="price">KSh 250</p>
+<button onclick="order('Pilau')">Order</button>
+</div>
+
+<div class="card">
+<h3>Beef Burger</h3>
+<p class="price">KSh 450</p>
+<button onclick="order('Beef Burger')">Order</button>
+</div>
+
+<div class="card">
+<h3>Nyama Choma</h3>
+<p class="price">KSh 700</p>
+<button onclick="order('Nyama Choma')">Order</button>
+</div>
+
+<div class="card">
+<h3>Chips & Chicken</h3>
+<p class="price">KSh 400</p>
+<button onclick="order('Chips & Chicken')">Order</button>
+</div>
+
+<div class="card">
+<h3>Spaghetti</h3>
+<p class="price">KSh 380</p>
+<button onclick="order('Spaghetti')">Order</button>
+</div>
+
+<div class="card">
+<h3>Vegetable Rice</h3>
+<p class="price">KSh 220</p>
+<button onclick="order('Vegetable Rice')">Order</button>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>About Us</h2>
+<p>We are a modern restaurant in Nairobi serving fresh meals daily with fast service and quality food.</p>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Phone: +254712345678</p>
+</section>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/254712345678">WhatsApp Us</a>
+
+<footer>
+<p>© 2026 Delicious Restaurant</p>
+</footer>
+
+<script>
+function order(item){
+let phone="254712345678";
+let msg="I want to order "+item;
+window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
